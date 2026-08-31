@@ -1,0 +1,360 @@
+.contribution-card {
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e7eb;
+
+  border-radius: 22px;
+
+  padding: 20px 24px 16px;
+
+  box-shadow:
+    0 1px 2px rgba(32, 33, 36, 0.03);
+
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.contribution-card:hover {
+  border-color: #d8dce2;
+
+  box-shadow:
+    0 6px 20px rgba(32, 33, 36, 0.06);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.contribution-header {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+.contribution-header h2 {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  font-weight: 500;
+
+  color: #3c4043;
+}
+
+.contribution-header p {
+  display: inline;
+
+  margin: 0 0 0 4px;
+
+  font-size: 13px;
+
+  color: #7a8087;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.contribution-container {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MONTHS
+========================================= */
+
+.contribution-months {
+  height: 18px;
+
+  margin-left: 34px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, 1fr);
+
+  color: #6f757b;
+
+  font-size: 10px;
+}
+
+.contribution-months span {
+  text-align: left;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+.contribution-body {
+  display: flex;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   WEEKDAY LABELS
+========================================= */
+
+.weekday-labels {
+  width: 34px;
+
+  flex-shrink: 0;
+
+  height: 84px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 1px 5px 1px 0;
+
+  color: #7a8087;
+
+  font-size: 9px;
+}
+
+.weekday-labels span {
+  height: 10px;
+
+  line-height: 10px;
+}
+
+
+/* =========================================
+   CONTRIBUTION GRID
+========================================= */
+
+.contribution-grid {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 84px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(53, minmax(0, 1fr));
+
+  gap: 3px;
+}
+
+.contribution-week {
+  display: grid;
+
+  grid-template-rows:
+    repeat(7, 1fr);
+
+  gap: 3px;
+}
+
+
+/* =========================================
+   CELL
+========================================= */
+
+.contribution-cell {
+  width: 100%;
+  height: 10px;
+
+  min-width: 4px;
+  min-height: 4px;
+
+  border-radius: 2px;
+
+  background: #edf0f2;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.12s ease,
+    border-radius 0.12s ease;
+}
+
+.contribution-cell:hover {
+  transform: scale(1.35);
+
+  border-radius: 3px;
+
+  outline: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.contribution-cell.empty {
+  background: transparent;
+
+  cursor: default;
+}
+
+.contribution-cell.empty:hover {
+  transform: none;
+
+  outline: none;
+}
+
+
+/* =========================================
+   LEVELS
+========================================= */
+
+.contribution-cell.level-0,
+.contribution-legend .level-0 {
+  background: #edf0f2;
+}
+
+.contribution-cell.level-1,
+.contribution-legend .level-1 {
+  background: #c6f0d5;
+}
+
+.contribution-cell.level-2,
+.contribution-legend .level-2 {
+  background: #8ed9a8;
+}
+
+.contribution-cell.level-3,
+.contribution-legend .level-3 {
+  background: #42b86b;
+}
+
+.contribution-cell.level-4,
+.contribution-legend .level-4 {
+  background: #16803d;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.contribution-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 9px;
+
+  margin-left: 34px;
+
+  color: #7a8087;
+
+  font-size: 9px;
+}
+
+.contribution-legend {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.contribution-legend i {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 2px;
+
+  display: block;
+}
+
+.contribution-legend span {
+  margin: 0 2px;
+}
+
+
+/* =========================================
+   LARGE SCREEN
+========================================= */
+
+@media (min-width: 1400px) {
+
+  .contribution-card {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .contribution-cell {
+    height: 11px;
+  }
+
+  .contribution-grid,
+  .weekday-labels {
+    height: 92px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .contribution-card {
+    padding: 18px;
+  }
+
+  .contribution-grid {
+    gap: 2px;
+  }
+
+  .contribution-week {
+    gap: 2px;
+  }
+
+  .contribution-cell {
+    height: 9px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .contribution-card {
+    border-radius: 18px;
+
+    padding: 16px;
+  }
+
+  .contribution-container {
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+  }
+
+  .contribution-months,
+  .contribution-body {
+    min-width: 700px;
+  }
+
+  .contribution-footer {
+    min-width: 700px;
+  }
+
+}

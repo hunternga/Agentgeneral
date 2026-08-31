@@ -1,0 +1,664 @@
+.dashboard-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 38px;
+
+  font-weight: 400;
+
+  letter-spacing: -0.6px;
+
+  color: #202124;
+}
+
+.dashboard-header p {
+  margin: 7px 0 0;
+
+  font-size: 15px;
+
+  color: #6b7280;
+}
+
+.dashboard-new-button {
+  height: 48px;
+
+  padding: 0 21px;
+
+  border: 0;
+
+  border-radius: 25px;
+
+  background: #c6f1d4;
+
+  color: #173b27;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+.dashboard-new-button:hover {
+  background: #b4eaca;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.dashboard-card {
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e8ec;
+
+  border-radius: 22px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 1px 2px rgba(32, 33, 36, 0.03);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d8dce2;
+
+  box-shadow:
+    0 8px 25px rgba(32, 33, 36, 0.07);
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-icon {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Soft icon backgrounds */
+
+.card-icon.blue,
+.quick-icon.blue {
+  background: #e1efff;
+  color: #1769d1;
+}
+
+.card-icon.green,
+.quick-icon.green {
+  background: #def7e6;
+  color: #198754;
+}
+
+.card-icon.purple,
+.quick-icon.purple {
+  background: #eee7ff;
+  color: #7147c8;
+}
+
+.card-icon.orange,
+.quick-icon.orange {
+  background: #fff0dc;
+  color: #d97800;
+}
+
+
+/* =========================================
+   MORE
+========================================= */
+
+.card-more {
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+
+  background: transparent;
+
+  border-radius: 50%;
+
+  color: #777b80;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-more:hover {
+  background: #f1f3f4;
+}
+
+
+/* =========================================
+   STAT
+========================================= */
+
+.stat-card {
+  min-height: 190px;
+}
+
+.stat-content {
+  margin-top: 23px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 14px;
+
+  color: #5f6368;
+}
+
+.stat-number {
+  margin-top: 5px;
+
+  font-size: 35px;
+
+  line-height: 42px;
+
+  font-weight: 500;
+
+  color: #202124;
+}
+
+.stat-description {
+  margin-top: 4px;
+
+  font-size: 13px;
+
+  color: #8a9097;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.card-heading h2 {
+  margin: 0;
+
+  font-size: 18px;
+
+  line-height: 24px;
+
+  font-weight: 500;
+
+  color: #202124;
+}
+
+.card-heading p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #7a8087;
+}
+
+.view-button {
+  border: 0;
+
+  background: transparent;
+
+  color: #1967d2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+
+  font-size: 13px;
+
+  padding: 5px 0;
+}
+
+
+/* =========================================
+   UPCOMING
+========================================= */
+
+.upcoming-card {
+  grid-column: span 2;
+
+  min-height: 290px;
+}
+
+.meeting-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.meeting-row {
+  display: grid;
+
+  grid-template-columns:
+    100px 1fr 35px;
+
+  align-items: center;
+
+  min-height: 62px;
+
+  border-top: 1px solid #f0f1f2;
+}
+
+.meeting-time {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #6f757b;
+
+  font-size: 13px;
+}
+
+.meeting-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.meeting-info strong {
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.meeting-info span {
+  font-size: 12px;
+
+  color: #858b91;
+}
+
+.meeting-arrow {
+  width: 32px;
+  height: 32px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #7b8188;
+
+  border-radius: 50%;
+}
+
+.meeting-arrow:hover {
+  background: #f1f3f4;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.quick-card {
+  grid-column: span 2;
+
+  min-height: 290px;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.quick-action {
+  width: 100%;
+
+  min-height: 62px;
+
+  padding: 9px 11px;
+
+  border: 0;
+
+  background: transparent;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  text-align: left;
+
+  color: #202124;
+}
+
+.quick-action:hover {
+  background: #f7f8fa;
+}
+
+.quick-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 12px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-action > div:nth-child(2) {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.quick-action strong {
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.quick-action span {
+  font-size: 12px;
+
+  color: #7c8288;
+}
+
+.quick-action > svg {
+  color: #858a90;
+}
+
+
+/* =========================================
+   CALENDAR
+========================================= */
+
+.calendar-card {
+  grid-column: span 2;
+
+  min-height: 290px;
+}
+
+.mini-calendar {
+  width: 100%;
+}
+
+.mini-calendar-days {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  margin-bottom: 8px;
+}
+
+.mini-calendar-days span {
+  text-align: center;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  color: #8a9096;
+}
+
+.mini-calendar-numbers {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 5px;
+}
+
+.mini-calendar-numbers span {
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  border-radius: 50%;
+
+  color: #3c4043;
+}
+
+.mini-calendar-numbers span:empty {
+  visibility: hidden;
+}
+
+.mini-calendar-numbers .calendar-today {
+  background: #c2e7ff;
+
+  color: #0b57d0;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   ACTIVITY
+========================================= */
+
+.activity-card {
+  grid-column: span 2;
+
+  min-height: 290px;
+}
+
+.activity-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.activity-row {
+  min-height: 62px;
+
+  border-top: 1px solid #f0f1f2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.activity-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #1a73e8;
+}
+
+.activity-row > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.activity-row strong {
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.activity-row span {
+  font-size: 12px;
+
+  color: #858b91;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  .dashboard-card {
+    padding: 18px;
+  }
+
+}
+
+
+@media (max-width: 1000px) {
+
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .upcoming-card,
+  .quick-card,
+  .calendar-card,
+  .activity-card {
+    grid-column: span 2;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .dashboard-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .upcoming-card,
+  .quick-card,
+  .calendar-card,
+  .activity-card {
+    grid-column: span 2;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card,
+  .upcoming-card,
+  .quick-card,
+  .calendar-card,
+  .activity-card {
+    grid-column: span 1;
+
+    min-height: auto;
+  }
+
+  .dashboard-header h1 {
+    font-size: 25px;
+  }
+
+  .dashboard-new-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
